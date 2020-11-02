@@ -1,0 +1,15 @@
+---
+- hosts:
+    - 127.0.0.1
+  roles:
+    - role: collivier.xtesting
+      project: vsperfxt
+      repo: 127.0.0.1
+      dport: 5000
+      gerrit:
+      suites:
+        - container: vsperfxt
+          tests:
+            - phy2phy_tput
+            - phy2phy_cont
+            - phy2phy_back2back

@@ -1,0 +1,43 @@
+---
+tiers:
+    -
+        name: phy2phy
+        order: 0
+        description: ''
+        testcases:
+            -
+                case_name: phy2phy_tput
+                project_name: vsperfxt
+                criteria: 100
+                blocking: true
+                clean_flag: false
+                description: ''
+                run:
+                    name: vsperfxt
+                    args:
+                        conf_file: 'vsperf.conf' 
+                        mode: 'trafficgen'
+            -
+                case_name: phy2phy_cont
+                project_name: vsperfxt
+                criteria: 100
+                blocking: true
+                clean_flag: false
+                description: ''
+                run:
+                    name: vsperfxt
+                    args:
+                        conf_file: 'vsperf.conf' 
+                        mode: 'trafficgen'
+            -
+                case_name: phy2phy_back2back
+                project_name: vsperfxt
+                criteria: 100
+                blocking: true
+                clean_flag: false
+                description: ''
+                run:
+                    name: vsperfxt
+                    args:
+                        conf_file: 'vsperf.conf' 
+                        mode: 'trafficgen'
